@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#zone-branding  {
+	/*padding-bottom:13px;*/
+	/*padding-left:34px;*/
+	padding-top:13px;
+	
+	
+}
+#zone-branding-wrapper {
+    background-color: #2D2115;
+    border-bottom: 5px solid #402F1E;
+    border-top: 5px solid #F8992B;
+}
+
+
+.front .grid-6 {
+	margin-left:0px;
+	
+}
+.front #zone-header {
+
+	box-shadow: 0 0 10px #888888;
+}
+
+#zone-header p {
+	margin-bottom:0px;
+	
+}
+#zone-header-wrapper {
+    background: none repeat scroll 0 0 #8E964D;
+    border-bottom: 1px solid #AAAAAA;
+	
+  
+   /* padding: 10px 0;*/
+}
+#zone-menu-wrapper {
+    background: none repeat scroll 0 0 #4C5323;
+    border-bottom: 1px solid #306B87;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    height: 30px;
+    z-index: 10;
+}
+#zone-content  {
+	background-color:#FFFFFF;
+	
+}
+#section-content {
+    background: none repeat scroll 0 0 #E1DFD6;
+}
+.front #section-content .zone-wrapper .zone {
+    background: #fff;
+	box-shadow: 0 0 10px #888888;
+}
+#zone-footer-wrapper  {
+	background:#333333;
+	min-height:60px;
+	color:#CCCCCC;
+	
+	
+}
+#region-footer-second  {
+	padding-top:24px;	
+	
+}
+
+#main-menu li a:link, #main-menu li a:visited  {
+    /*background: url("/sites/all/themes/ncfs/line.gif") no-repeat scroll 0 0 transparent;*/
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding-left: 12px;
+    text-decoration: none;
+	/*float:right;*/
+	
+	
+}
+#zone-preface  {
+	
+	/*
+	background-color:#FFF;*/
+	
+}
+.grid-4 {
+	margin-top:16px;
+	
+}
+
+#first-time {
+	display:none;
+	
+	}
+#zone-preface  {
+	
+	
+}
+#zone-preface .block {
+	padding:0 14px 0 12px;
+	
+}
+.block ul  {
+	padding-left:15px;
+	margin-left:15px;
+}
+
+#zone-postscript   {
+	
+	background-color:#FFF;
+	
+}

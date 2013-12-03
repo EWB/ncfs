@@ -1,0 +1,18 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+body {
+/*	background-color: #E6E4DA;
+	background-image: url("http://northcountryfolkseries.org/sites/default/files/bg-header-m.gif");
+	background-repeat: repeat-x;
+    border-top: 5px solid #000000;
+	font-size:16px;*/
+}
+
+.zone-header { 
+
+	display: none;
+
+ }
+
+

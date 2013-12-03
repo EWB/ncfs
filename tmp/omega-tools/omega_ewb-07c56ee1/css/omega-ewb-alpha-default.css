@@ -1,0 +1,15 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+body {
+  /*  background-color: #E6E4DA;
+    background-image: url("http://northcountryfolkseries.org/sites/default/files/bg-header.gif");
+    background-repeat: repeat-x;
+    border-top: 5px solid #000000;
+	/*font-family: "Neucha",sans-serif;*/
+	/*font-size:16px;*/
+	
+}
+.zone-header { 
+	display: block; 
+	
+	}

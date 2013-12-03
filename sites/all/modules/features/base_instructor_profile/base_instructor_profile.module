@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Base Instructor Profile feature.
+ */
+
+include_once 'base_instructor_profile.features.inc';

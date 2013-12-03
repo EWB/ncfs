@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	
+	font-family: "Helvetica Neue","Helvetica","Arial";
+	font-size:15px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue","Helvetica","Arial";
+	
+}
+
+h1 {
+	font-size:26px;
+	
+}
+h2.block-title   {
+	margin-top:9px;
+	margin-bottom:12px;
+	letter-spacing: 0em;
+	/*background-color:#999999;*/
+
+}
+
+a:link, a:visited {
+	text-decoration:none;
+	
+	
+}
+a:hover {
+	color:#669900;
+}
+
+
+#zone-user-wrapper  {
+	height:40px;
+	background-color:#000;
+	color:#FFF;
+	
+	
+	
+}
+#zone-user-wrapper a  {
+	color:#FFF;
+	text-decoration: none;	
+	float:right;
+	
+}
+
+#zone-branding  {
+	/*padding-bottom:13px;*/
+	/*padding-left:34px;*/
+	padding-top:13px;
+	
+	
+}
+
+#zone-branding-wrapper {
+    background-color: #2D2115;
+    border-bottom: 5px solid #402F1E;
+/*  border-top: 5px solid #F8992B;
+*/	border-top: 1px solid #CCC;
+}
+
+
+.front .grid-6 {
+	margin-left:0px;
+	
+}
+.front #zone-header {
+
+	/*box-shadow: 0 0 10px #888888;*/
+}
+
+#zone-header p {
+	margin-bottom:0px;
+	
+}
+#zone-header-wrapper {
+    background: none repeat scroll 0 0 #8E964D;
+    border-bottom: 1px solid #AAAAAA;
+	
+  
+   /* padding: 10px 0;*/
+}
+#zone-menu-wrapper {
+	background: #4C5323;
+    padding-top:7px;
+	padding-bottom:7px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+#zone-content  {
+	background-color:#FFFFFF;
+	
+}
+.page-frequently-asked-questions  #zone-content {
+	min-height: 600px;
+	
+}
+#section-content {
+    background: none repeat scroll 0 0 #E1DFD6;
+}
+.front #section-content .zone-wrapper .zone {
+    background: #fff;
+	box-shadow: 0 0 10px #888888;
+}
+#zone-footer-wrapper  {
+	background:#333333;
+	min-height:60px;
+	color:#CCCCCC;
+	
+	
+}
+#region-footer-second  {
+	padding-top:24px;	
+	
+}
+
+#main-menu li a:link, #main-menu li a:visited  {
+    /*background: url("/sites/all/themes/ncfs/line.gif") no-repeat scroll 0 0 transparent;*/
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding-left: 12px;
+    text-decoration: none;
+	/*float:right;*/
+	
+	
+}
+#zone-preface  {
+	
+	/*
+	background-color:#FFF;*/
+	
+}
+.grid-4 {
+	margin-top:16px;
+	
+}
+
+#first-time {
+	display:none;
+	
+	}
+#zone-preface  {
+	
+	
+}
+#zone-preface .block {
+	padding:0 14px 0 12px;
+	
+}
+.block ul  {
+	padding-left:15px;
+	margin-left:15px;
+}
+
+#zone-postscript   {
+	
+	background-color:#FFF;
+/*	box-shadow: 0 0 10px #888888;
+*/	border-top:none;
+}
+
+
+/******** EWB Webform Styling *********/
+
+.node-type-webform .submitted {
+	display:none;
+	
+}
+/*.webform-container-inline  {
+    display: block;
+    margin-right: 52px;
+}*/
+.zone-content  {
+	
+/*	box-shadow: 0 0 10px #888888;
+*/	
+}
+
+.not-front .zone-content  {
+	
+	box-shadow: 0 0 10px #888888;
+	
+}
+.node-type-webform #edit-actions  {
+	padding-top:18px;
+
+}
+
+.webform-container-inline label {
+    float: left;
+    width: 84px;
+	margin-right: 0em;
+}
+
+.webform-container-inline .webform-component-checkboxes label {
+    display: inline;
+    margin-right: 3em;
+}
+.webform-client-form  {
+	
+	padding-left:14px;
+	
+}
+.webform-component-checkboxes .form-checkboxes  {
+	padding-left:14px;
+	
+}
+
+/********************/
+
+.field-name-field-base-event-photograph img {
+	padding:5px;
+	box-shadow: 0 0 10px #888888;
+	margin:4px 12px 24px 10px;
+	float:right;
+	
+}
+
+.field-name-field-base-instructor-photo img, .views-field-field-base-instructor-photo img {
+	padding:5px;
+	box-shadow: 0 0 10px #888888;
+	margin:4px 12px 24px 10px;
+	float:right;
+	
+}
+
+.field-items .field-name-field-base-instructor-photo img  {
+	float:right;
+	
+}
+.field-type-entityreference .field-name-field-base-instructor-photo  .field-items {
+	float:right;
+	clear:none;
+	
+	
+}
+.field-label-inline .field-label, .field-label-inline .field-items {
+    float: none;
+}
+
+#node_event_base_full_group_details  {
+/*	display: block;
+	float:right;
+	
+	margin-left: 12px;
+	background-color:#F7F7F5;
+	box-shadow: 0 0 3px #888888;*/
+	padding-left:32px;
+	font-size:16px;
+	
+}
+#node_event_base_full_group_details .fieldset-legend {
+	font-weight:bold;	
+	font-size:18px;
+	
+}
+.node-type-event-base .field-name-body  {
+	padding-top:14px;
+	padding-right:12px;
+	
+}
+.node-type-event-base h2.node-title  {
+	font-size: 18px;
+	margin-bottom:2px;
+	
+}
+
+.field-name-field-tags .field-items a  {
+	padding-right:8px;
+	
+	
+}
+
+.front h1  {
+	display:none;	
+	
+}
+
+.views-field-field-base-event-photograph  {
+	padding-top:14px;
+	padding-bottom:12px;
+	
+	
+}
+.views-field-field-base-event-photograph img  {
+	padding:5px;
+	box-shadow: 0 0 10px #888888;
+	
+}
+
+.view-upcoming-workshops .views-field .views-field-body td {
+	
+	width: 130px;
+	
+}
+
+.front-workshop  a:link, a:visited {
+	font-size:18px;
+	line-height:14px;
+}
+
+.view-upcoming-workshops .item-list li  {
+	/*list-style-image:url('sites/default/files/soap-making-slide.png');
+
+    list-style: square outside none;*/
+
+}
+
+.view-upcoming-workshops .item-list ul li {
+    margin: 0 0 0.95em 0em;
+	
+	
+}
+
+.views-accordion-header  {
+	background-color:#333333;
+	
+}
+.view-frequently-asked-questions .views-label  {
+	font-weight:bold;
+	
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	font-size:1.1em;
+	font-weight:bold;
+	color: #006699;	
+}
+
+#block-views-upcoming-workshops-block-1  {
+	background-color:#F7F7F5;
+	padding: 0 4px 4px 12px;	
+	box-shadow: 0 0 3px #888888;
+	
+}
+#block-block-12 .content img {
+	display: block;
+    padding-left: 22px;
+	
+}
+
+#field-name-field-workshop-location .field-label-inline .field-label {
+	float:left;
+	
+}
+#field-name-field-workshop-location .field-item p  {
+	margin-bottom:0px;	
+	
+}
+
+#field-name-field-workshop-location .field-label-inline .field-label, #field-name-field-workshop-location .field-label-inline .field-items {
+    float: left;
+}
