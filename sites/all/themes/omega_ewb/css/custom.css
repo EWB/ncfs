@@ -34,7 +34,7 @@ a:hover {
 
 
 #zone-user-wrapper  {
-	height:40px;
+	/*height:40px;*/
 	background-color:#000;
 	color:#FFF;
 	
@@ -51,16 +51,16 @@ a:hover {
 #zone-branding  {
 	/*padding-bottom:13px;*/
 	/*padding-left:34px;*/
-	padding-top:13px;
-	
+/*	padding-top:13px;
+*/	
 	
 }
 
 #zone-branding-wrapper {
     background-color: #2D2115;
-    border-bottom: 5px solid #402F1E;
-/*  border-top: 5px solid #F8992B;
-*/	border-top: 1px solid #CCC;
+/*    border-bottom: 5px solid #402F1E;
+  border-top: 5px solid #F8992B;
+	border-top: 1px solid #CCC;*/
 }
 
 
@@ -354,4 +354,12 @@ a:hover {
 
 #field-name-field-workshop-location .field-label-inline .field-label, #field-name-field-workshop-location .field-label-inline .field-items {
     float: left;
+}
+
+h1.site-name, h2.site-name {
+	display: none;
+}
+
+#zone-user-wrapper {
+	background-color: #2D2115;
 }
