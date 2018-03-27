@@ -388,25 +388,14 @@ function _form_builder_webform_form_builder_types_hidden() {
   $fields['hidden'] = array(
     'title' => t('Hidden'),
     'weight' => 8,
+    'class' => 'FormBuilderWebformHiddenElement',
   );
   $component['name'] = t('New hidden');
-  $fields['hidden']['default'] = _form_builder_webform_default('hidden', array(), $component);
+  $fields['hidden']['default'] = _form_builder_webform_default('hidden', array(
+    'hidden_type' => 'hidden',
+  ), $component);
 
   return $fields;
-}
-
-/**
- * Implements _form_builder_webform_form_builder_load_component().
- */
-function _form_builder_webform_form_builder_load_hidden($form_element) {
-  // Hidden elements may be #type "value" or "hidden". Set the internal property
-  // to keep track of hidden fields.
-  $form_element['#form_builder']['element_type'] = 'hidden';
-  if (!isset($form_element['#default_value'])) {
-    $form_element['#default_value'] = $form_element['#value'];
-  }
-
-  return $form_element;
 }
 
 /**
@@ -417,14 +406,18 @@ function _form_builder_webform_form_builder_preview_alter_hidden($form_element) 
   $form_element['#type'] = 'markup';
   $form_element['#form_builder']['element_type'] = 'markup';
   unset($form_element['#theme']);
-
-  // Add the 'webform_element' theme wrapper at the beginning, where it would
-  // normally be.
-  array_unshift($form_element['#theme_wrappers'], 'webform_element');
+  $c = $form_element['#webform_component'];
+  if ($c['extra']['hidden_type'] == 'value') {
+    array_unshift($form_element['#theme_wrappers'], 'webform_element');
+  }
+  else {
+    unset($form_element['#wrapper_attributes']);
+  }
 
   // Display the title of the hidden field as regular markup.
-  $form_element['#children'] = t('@title - <em>hidden field</em>', array('@title' => $form_element['#title']));
-  $form_element['#title'] = NULL;
+  $v['@title'] = $c['name'];
+  $v['@type'] = $c['extra']['hidden_type'] == 'value' ? 'secure' : 'insecure - editable by JavaScript';
+  $form_element['#children'] = t('@title - <em>hidden field (@type)</em>', $v);
 
   return $form_element;
 }
@@ -624,19 +617,6 @@ function _form_builder_webform_form_builder_types_pagebreak() {
 }
 
 /**
- * Implements _form_builder_webform_form_builder_load_component().
- */
-function _form_builder_webform_form_builder_load_pagebreak($form_element) {
-  // Pagebreak components are rendered as hidden elements by webform, but
-  // hidden elements do not have a #title property. So we have to convert the
-  // rendered value to be used as the #title instead.
-  $form_element['#title'] = $form_element['#value'];
-  $form_element['#form_builder']['element_type'] = 'pagebreak';
-
-  return $form_element;
-}
-
-/**
  * Implements _form_builder_webform_form_builder_save_component().
  *
  * @todo make this actually work.
@@ -671,7 +651,7 @@ function _form_builder_webform_form_builder_preview_alter_pagebreak($form_elemen
   array_unshift($form_element['#theme_wrappers'], 'webform_element');
 
   // Display the title of the pagebreak field as regular markup.
-  $form_element['#children'] = '--- ' . check_plain($form_element['#title']) . ' ---';
+  $form_element['#children'] = '--- ' . check_plain($form_element['#webform_component']['name']) . ' ---';
   $form_element['#children'] .= '<div class="description">' . t('(Fields below will be displayed on a new page)') . '</div>';
   $form_element['#title_display'] = 'none';
 
@@ -999,7 +979,6 @@ function _form_builder_webform_default($component_type, $merge_extras = array(),
   webform_component_defaults($component);
   $component['extra'] = array_merge($component['extra'], $merge_extras);
   $component = array_merge($component, $merge_component);
-  $default_element = webform_component_invoke($component_type, 'render', $component, NULL, FALSE);
   $default_element['#webform_component'] = $component;
 
   // Call the loading function to make sure that the default element gets the

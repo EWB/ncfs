@@ -213,7 +213,7 @@ function form_builder_property_options_form(&$form_state, $form_type, $element, 
 }
 
 function form_builder_property_options_form_submit(&$form, &$form_state) {
-  $options = $form_state['values']['options']['options_field'];
+  $options = $form_state['values']['options']['options'];
   $default_value = $form_state['values']['options']['default_value'];
 
   if (isset($form_state['values']['options']['multiple'])) {
@@ -261,6 +261,7 @@ function form_builder_property_markup_form(&$form_state, $form_type, $element, $
     '#default_value' => $element['#markup'],
     '#format' => isset($element['#format']) ? $element['#format'] : NULL,
     '#weight' => 1,
+    '#wysiwyg' => FALSE,
   );
 
   return $form;
